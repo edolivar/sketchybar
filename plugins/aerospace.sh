@@ -7,6 +7,8 @@ ITEM_NAME="space.$ITEM_WORKSPACE_ID"
 display_icon=""
 label_drawing="off"
 icon_drawing="off"
+FOCUSED_WORKSPACE=$(aerospace list-workspaces --focused)
+
 
 apps=$(aerospace list-windows --workspace "$ITEM_WORKSPACE_ID" --format '%{app-name}' 2>/dev/null | sort -u)
 
